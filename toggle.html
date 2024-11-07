@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Added a light background for contrast */
+        }
+        div {
+            background-color: red;
+           
+            width: 400px;
+            margin: 10px;
+            text-align: center;
+            color: white; 
+        }
+        p {
+            background-color: yellow;
+            height: 20px;
+            display: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, ullam.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <button id="fadein" type="button">Fade In</button>
+    <button id="fadeout" type="button">Fade Out</button>
+    <button id="fadetoggle"type="button">Fade Toggle</button>
+    <button id="fadeto"type="button">Fade To 20%</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#fadein').click(function() {
+                $('p,h2').fadeIn(3000, function() {
+                    console.log("Text faded in.");
+                });
+            });
+
+            $('#fadeout').click(function() {
+                $('h2,p').fadeOut(3000, function() {
+                    console.log("Text faded out.");
+                });
+            });
+
+            $('#fadetoggle').click(function() {
+                $('h2,p').fadeToggle(3000, function() {
+                    console.log("Fade toggle executed.");
+                });
+            });
+
+            $('#fadeto').click(function() {
+                $('h2,p').fadeTo(3000, 0.2, function() {
+                    console.log("Text faded to 20% opacity.");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

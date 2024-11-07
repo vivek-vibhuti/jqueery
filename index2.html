@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            justify-items: center;
+        }
+        .btn {
+            background-color: red;
+            justify-items: center;
+            height: 20px;
+            width: 200px;
+           
+
+        }
+        .btn1,.btn2{
+            background-color: red;
+            justify-items: center;
+            height: 20px;
+            width: 200px;
+           
+
+        }
+    </style>
+</head>
+<body>
+   <p class="hidebtn">
+       Hello world Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores alias repellendus incidunt suscipit delectus fugit sunt beatae eveniet voluptas? 
+       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed alias necessitatibus quasi corrupti asperiores beatae voluptatem consectetur expedita itaque dolorum laudantium sequi iusto nulla odio hic et aspernatur, totam quia!
+       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quam aliquam cumque at expedita? Atque soluta quod consequuntur, consectetur delectus facilis? Optio eaque similique natus iure temporibus sapiente exercitationem ex commodi architecto inventore! Fugit possimus aperiam tempora natus enim tenetur nobis sequi, sint nisi rerum dolorem, fuga obcaecati. Fuga, harum.
+   </p>
+   <button  class= "btn1"type="button">hide</button>
+   <button  class= "btn"type="button">show</button>
+   <button  class= "btn2"type="button">toggle</button>
+   <script> 
+       $(document).ready(function() {
+           
+           $('.btn1').click(function() {
+               $('.hidebtn').hide(3000, function() {
+                   console.log("paragraph hidden");
+               });
+           });
+
+           $('.btn').click(function() {
+               $('.hidebtn').show(1000, function() {
+                   console.log("paragraph shown");
+               });
+           });
+           $('.btn2').click(function() {
+               $('.hidebtn').toggle(4000, function() {
+                   
+                   if ($('.hidebtn').is(':visible')) {
+                    console.log("paragraph toggled");
+                       console.log("Paragraph shown");
+                   } else {
+                    console.log("paragraph toggled");
+                       console.log("Paragraph hidden");
+                   }
+               });
+           });
+       });
+   </script>
+</body>
+</html>

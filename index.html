@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jQuery from a CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body> 
+    <h1>hello</h1>
+    <p>hello</p>
+    <p id="second">second</p>
+    <p id="third">third</p>
+    <script>
+        $(document).ready(function() { 
+            $('#second').click(function() { 
+                alert("second");
+            });
+            $('p').dblclick(function() {
+                alert("yo");
+            });
+            $('#third').mouseenter(function() {
+                alert("yo");
+            });
+        }); 
+    </script>
+</body>
+</html>
